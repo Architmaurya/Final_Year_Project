@@ -1,0 +1,238 @@
+body{
+    overflow-x: hidden;
+    }
+    .posi{
+      position: fixed;
+    }
+.hero-section{
+    background-image: url(../public/b1.jpg);
+    min-height:500px ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    image-resolution: 300dpi snap;
+}
+.typewriter{
+    color: rgb(21, 118, 192);
+    font-size: 80px;
+    text-wrap: balance;
+    margin-left: 15%; 
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+nav ul li:hover{
+border: 2px solid rebeccapurple;
+background-color: #9ff6f3fb;
+scale: 1.1;
+box-shadow: 0px 0px 2px 4px rgb(95, 40, 2) ;
+box-sizing: border-box;
+}
+.imglogo{
+  height:50px;
+  width: 100%;
+  image-resolution: 100dpi;
+  mix-blend-mode:multiply ;
+  
+}
+.nav-link {
+  display: flex;
+  align-items: center; /* Vertically aligns icons and text */
+  gap: 8px; /* Spacing between icon and text */
+  color: #333; /* Default text color for nav items */
+}
+
+.nav-link.active {
+  color: #007bff; /* Active link color */
+}
+
+.nav-icon {
+  font-size: 20px; /* Makes all icons the same size */
+  color: #2196f3 !important; /* Change this to any desired color */
+}
+
+
+.nav-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.nav-text{
+    color: rgba(0, 47, 255, 0.557) !important;
+    font-size: larger;
+    font-weight: bold;
+}
+.nav-item {
+    margin-right: 20px; /* Adds space between items */
+  }
+  
+  .nav-link {
+    padding: 10px 15px; /* Adds padding around the links */
+  }
+  
+  /*Footer css */
+  .footer{
+    background-color: #063547;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    height: 45vh;
+    text-align: left;
+    
+}
+
+.social-icons a {
+    color:white;
+    font-size: 1.8rem;
+    margin-right:0.2rem;
+    border-radius: 50%!important;
+    
+}
+
+.btn-sub{
+    background-color: #43b89d!important;
+    border:0 !important;
+    color:white !important;
+}
+
+.copyrights{
+    height: 10vh;
+    text-align: center;
+    background-color: white!important;
+}
+
+
+/*Category css*/
+
+.container_Cate {
+    margin-top: 20px;
+  }
+  
+  .category-card {
+    background-color: #f8f9fa; /* Light background for the card */
+  }
+  
+  .category-icon {
+    font-size: 2.5rem;
+    color: #007bff; /* Bootstrap primary blue */
+  }
+  
+  .category-card h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .category-card p {
+    font-size: 0.9rem;
+    color: #6c757d; /* Muted text */
+  }
+
+  /*Contact css*/
+
+  /* .container {
+    margin-top: 50px;
+    background : rgba(110, 9, 9, 0.4);
+  } */
+  /* .Contact_back{
+    border: 2px solid rebeccapurple;
+    background-color:rgb(164, 183, 215)
+  } */
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  img {
+    max-width: 100%;
+    height:40%;
+    margin-top: 5%;
+    border-radius: 20px;
+  }
+  
+  .form-control {
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 16px;
+   
+  }
+  
+  .btn {
+    border-radius: 50px;
+    width: 100%;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  /*Register css*/
+  .form-style{
+    border: 2px solid rgba(108, 24, 192, 0.66);
+    min-height: 400px;
+    padding: 2%;
+    background: linear-gradient(24deg, #D7D75D 0%, #C5637C 57%, #BFA6BF 100%);
+  }
+
+  .admin-form{
+    border: 2px solid black;
+    background:linear-gradient(45deg, rgba(128, 32, 0, 1) 0%, rgba(238, 130, 238, 1) 100%); ;
+  }
+
+  .user-form{
+    border: 2px solid rgba(190, 142, 30, 0.395);
+    background:linear-gradient(45deg, rgb(191, 223, 9) 0%, rgb(240, 12, 77) 100%); ;
+  }
+
+  .error_msg{
+    color: rgb(0, 187, 255) !important;
+    font-size: 30px;
+  }
+
+  /*AdminDashboard*/
+  .Admin-container{
+    min-height: 300px;
+    margin: 0px auto;
+    border: 2px solid black;
+  }
+  .admin-heading{
+    border-bottom:2px solid black ;
+    box-sizing: border-box;
+    background-color: #BFA6BF;
+    color: #007bff;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  .form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+ }
+ .form_label{
+  font-weight: 600;
+  color: #074f88;
+}
+.form_card{
+  border: 1.5px solid #074f88 !important;
+}
+.form_cardheader{
+  border-bottom: 1.5px solid #074f88 !important;
+}
+
+/*User List*/
+.user_list{
+  min-height: 200px;
+  border: 2px solid rgba(102, 51, 153, 0.628);
+  background-color: #BFA6BF;
+  border-radius: 10px;
+
+}
+.card{
+  border: 2px solid rgba(255, 0, 0, 0.533);
+}
+.user_img{
+  border-radius: 50%;
+}
+.user_name{
+  text-align: center;
+  font-size: 40px;
+}
+.btn_block{
+  align-items: center;
+}
