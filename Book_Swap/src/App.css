@@ -215,6 +215,11 @@ box-sizing: border-box;
   border-bottom: 1.5px solid #074f88 !important;
 }
 
+.admin_img{
+  max-height: 150px;
+  
+}
+
 /*User List*/
 .user_list{
   min-height: 200px;

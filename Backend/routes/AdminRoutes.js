@@ -40,4 +40,29 @@ AdminRoutes.post("/Admin-login", async (req, res) => {
         }
       });
 
+//Admin update
+AdminRoutes.put("/admin-update/:_id",async(req,res)=>{
+  const _id=req.params._id;
+  const {name,email,contact,password}=req.body;
+  let img=req.files.img;
+  img.mv("uploads/"+img.name,(err)=>{
+    if(err){
+        res.send(err)
+    }
+})
+  
+
+const result=await AdminTable.findByIdAndUpdate({_id:_id},{
+       $set:{name,email,contact,password,img:img.name}},
+      {new:true}
+)
+ res.json({
+  code:200,
+  message:"Data updated Successfull",
+  data:result
+
+ })
+
+})
+
 module.exports={AdminRoutes}
