@@ -16,7 +16,7 @@ function Nav() {
   useEffect(() => {
     const temData = JSON.parse(localStorage.getItem("data"));
     setData(temData);
-    const temUserType = JSON.parse(localStorage.getItem("userType"));
+    const temUserType =JSON.parse(localStorage.getItem("userType"));
     setUserType(temUserType || ""); // Fallback to an empty string.
   }, [location.pathname]);
 

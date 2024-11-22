@@ -8,5 +8,5 @@ const UserSchema=new mongoose.Schema({
     createdAt:{type:Date,default:Date.now()},
     updatedAt:{type:Date,default:Date.now()}
 })
-const UserTable=mongoose.model("Users",UserSchema)
-module.exports={UserTable}
+const userTable=mongoose.model("Users",UserSchema)
+module.exports={userTable};

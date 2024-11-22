@@ -4,9 +4,11 @@ const cors=require("cors");
 const expressFileupload=require('express-fileupload');
 const app=express()
 const {AdminRoutes}=require('./routes/AdminRoutes')
+const {userRoutes}=require('./routes/userroutes');
 app.use(express.json());
 app.use(cors())
 app.use("/upload",express.static("./uploads"));
+
 //http://localhost:9000/upload/daya.jpg
 app.use(expressFileupload())
 const DbConnect=async()=>{ 
@@ -18,7 +20,8 @@ const DbConnect=async()=>{
 
 DbConnect();
  app.use("/api",AdminRoutes);
-
+ app.use("/api",userRoutes);
+ 
 
 
 app.listen(8000,()=>{
