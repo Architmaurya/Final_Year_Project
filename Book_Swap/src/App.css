@@ -236,3 +236,18 @@ box-sizing: border-box;
 .btn_block{
   align-items: center;
 }
+
+
+/*Book_form*/
+.container_Bookform{
+  border: 4px double rgb(226, 86, 43);
+  /* background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 50%, #FFC107 100%); */
+  background-color: #f8f9fa;
+}
+
+.form-style-Book{
+  border: 6px solid rgba(24, 158, 192, 0.66);
+  min-height: 400px;
+  padding: 2%;
+  background: linear-gradient(24deg, #84d75d 0%, #eec2cd 57%, #6e4a6e 100%);
+}
