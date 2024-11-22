@@ -14,7 +14,7 @@ const schema = yup
     })
 
 function Register(){
-    const { register, handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit,reset, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
     });
     const handleData = async (data) => {
@@ -30,7 +30,9 @@ function Register(){
             }
         })
         alert("Registation SuccessFull !.")
+        reset()
     }
+  
     return(
         <>
         <div className="row">
