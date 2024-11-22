@@ -115,7 +115,7 @@ function Nav() {
                   <ul className="navbar-nav mx-auto mb-2 mb-lg-0 nav-bar">
                     <li className="nav-item">
                       <Link to="/user" className="nav-link active nav-text">
-                        <FaHome className="nav-icon" /> Home
+                        <FaHome className="nav-icon" /> Profile
                       </Link>
                     </li>
                     <li className="nav-item">
