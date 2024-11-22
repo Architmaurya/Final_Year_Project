@@ -20,7 +20,7 @@ userRoutes.post("/user-register",async(req,res)=>{
 }) ;
 
 
-//Admin logIn 
+//user logIn 
 userRoutes.post("/user-login", async (req, res) => {
     const {email,password}=req.body
           const result = await userTable.findOne({email,password}); 
