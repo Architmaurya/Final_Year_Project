@@ -10,7 +10,7 @@ function Home(){
         <div className="col-lg-5 col-md-8 typewriter">
         <Typewriter
           options={{
-            strings: ['Find the most exciting startup jobs...'],
+            strings: ['Find the most exciting  Books......'],
             autoStart: true,
             loop: true,
           }}
