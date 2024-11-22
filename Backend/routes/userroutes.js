@@ -4,14 +4,14 @@ const {userTable} =require('../models/usermodels');
 
 //user registration 
 userRoutes.post("/user-register",async(req,res)=>{
-    const {name,email,contact,password} =req.body;
+    const {name,email,contact,password,location} =req.body;
     let img=req.files.img;
     img.mv("uploads/"+img.name,(err)=>{
         if(err){
             res.send(err)
         }
     })
-   const data = new userTable({name:name,img:img.name,email:email,contact:contact,password:password})
+   const data = new userTable({name:name,img:img.name,email:email,location:location,contact:contact,password:password})
    const result= await data.save()
        res.json({
         code :200,

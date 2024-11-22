@@ -11,6 +11,8 @@ const schema = yup
         email: yup.string().required().email(),
         contact: yup.string().required(),
         password: yup.string().required(),
+        location: yup.string().required(),
+
     })
 
 function Register(){
@@ -24,6 +26,7 @@ function Register(){
         formData.append("email", data.email)
         formData.append("contact", data.contact)
         formData.append("password", data.password)
+        formData.append("location", data.location)
         await axios.post("http://localhost:8000/api/user-register", formData, {
             headers: {
                 "Content-Type": "multipart/form-data"
@@ -67,6 +70,11 @@ function Register(){
                     <div className="">
                     <input type="number" className="form-control mb-3" placeholder="Enter Your Contact Number"
                     {...register('contact')}
+                    />
+                    </div>
+                    <div className="">
+                    <input type="text" className="form-control mb-3" placeholder="Enter Your Location"
+                    {...register('location')}
                     />
                     </div>
                     <div className="">
