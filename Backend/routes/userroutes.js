@@ -39,6 +39,30 @@ userRoutes.post("/user-login", async (req, res) => {
         }
       });
 
+//User Update 
+userRoutes.put("/user-update/:_id",async(req,res)=>{
+  const _id=req.params._id;
+  const {name,email,contact,password,location}=req.body;
+  let img=req.files.img;
+  img.mv("uploads/"+img.name,(err)=>{
+    if(err){
+        res.send(err)
+    }
+})
+  
+
+const result=await userTable.findByIdAndUpdate({_id:_id},{
+       $set:{name,email,contact,password,location,img:img.name}},
+      {new:true}
+)
+ res.json({
+  code:200,
+  message:"Data updated Successfull",
+  data:result
+
+ })
+
+})
 
 
 module.exports={userRoutes};
