@@ -83,6 +83,34 @@ userRoutes.post("/user-bookreg",async(req,res)=>{
      })
 })
 
+//Posted Book
+
+userRoutes.post("/user-bookpost",async(req,res)=>{
+  const { userId }=req.body;
+  const bookPost=await booktable.find({userId:userId}).sort({createdAt:-1});
+  const finnalData= await Promise.all(
+    bookPost.map(async(item)=>{
+    const BookDetails= await userTable.findOne({_id:item.userId});
+     return {
+
+          _id:item._id,
+          Book_Name:item.Book_Name,
+          Author_Name:item.Author_Name,
+          Genres:item.Genres,
+          Amount:item.Amount,
+          contact:item.contact,
+          img:item.img,
+          name:BookDetails.name
+    }
+    })
+   )
+   res.json({
+    code:200,
+    message:"data found",
+    data:finnalData
+   })
+}) 
+
 
 
 

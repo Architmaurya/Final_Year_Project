@@ -124,7 +124,7 @@ function Nav() {
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/user/bookposter" className="nav-link nav-text">
+                      <Link to="/user/bookpost" className="nav-link nav-text">
                         <FcAbout className="nav-icon" /> Posted
                       </Link>
                     </li>
