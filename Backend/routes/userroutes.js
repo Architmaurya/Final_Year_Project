@@ -1,6 +1,7 @@
 const express=require("express")
 const userRoutes=express.Router()
 const {userTable} =require('../models/usermodels');
+const {booktabl, booktable} =require('../models/bookdatamodels')
 
 //user registration 
 userRoutes.post("/user-register",async(req,res)=>{
@@ -62,6 +63,24 @@ const result=await userTable.findByIdAndUpdate({_id:_id},{
 
  })
 
+})
+
+
+//Book reg
+userRoutes.post("/user-bookreg",async(req,res)=>{
+  const { Book_Name,Author_Name, Genres, Amount, contact} =req.body;
+  let img=req.files.img;
+  img.mv("uploads/"+img.name,(err)=>{
+      if(err){
+          res.send(err)
+      }
+  })
+ const data = new booktable({ Book_Name: Book_Name,img:img.name,Author_Name:Author_Name,Genres:Genres,contact:contact, Amount: Amount})
+ const result= await data.save()
+     res.json({
+      code :200,
+      data:result
+     })
 })
 
 
