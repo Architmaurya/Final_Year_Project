@@ -17,6 +17,8 @@ import UserList from './comp/Admin/UserList';
 import BookList from './comp/Admin/BookList';
 import BookReg from './comp/user/BookReg';
 import Userbook from './comp/user/Userbook';
+import Userbooklist from './comp/user/Userbooklist';
+import './App.css'
 function App() {
   const location = useLocation();
   const [role, setRole] = useState('');
@@ -47,6 +49,7 @@ function App() {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/userlist" element={<UserList />} />
             <Route path="/admin/booklist" element={<BookList />} />
+            
           </>
         )}
 
@@ -56,9 +59,8 @@ function App() {
             <Route path="/user" element={<UserDashboard />} />
             <Route path="/user/bookform" element={<BookReg />} />
             <Route path="/user/bookpost" element={<Userbook />} />
-           
-
-            
+            <Route path="/user/user-allbooklist" element={<Userbooklist />} />
+          
           </>
         )}
       </Routes>

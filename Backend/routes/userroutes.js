@@ -1,7 +1,7 @@
 const express=require("express")
 const userRoutes=express.Router()
 const {userTable} =require('../models/usermodels');
-const {booktabl, booktable} =require('../models/bookdatamodels')
+const {booktable} =require('../models/bookdatamodels')
 
 //user registration 
 userRoutes.post("/user-register",async(req,res)=>{
@@ -109,7 +109,17 @@ userRoutes.post("/user-bookpost",async(req,res)=>{
     message:"data found",
     data:finnalData
    })
-}) 
+}) ;
+
+//All bookListing
+userRoutes.get("/user-allbooklisting", async (req, res) => {
+  try {
+    const allBooks = await booktable.find({});
+    res.status(200).json(allBooks); // Send the books to the frontend
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch books" });
+  }
+});
 
 
 

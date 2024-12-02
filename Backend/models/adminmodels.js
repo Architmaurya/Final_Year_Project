@@ -1,4 +1,4 @@
-const mongoose=require("mongoose")
+const mongoose=require("mongoose");
 let AdminSchema=new mongoose.Schema({
     name:{type:String,required:true},
     email:{type:String,required:true},

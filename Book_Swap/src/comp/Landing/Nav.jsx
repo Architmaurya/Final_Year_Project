@@ -129,7 +129,7 @@ function Nav() {
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link to="/user/booklist" className="nav-link nav-text">
+                      <Link to="/user/user-allbooklist" className="nav-link nav-text">
                         <MdOutlineContactPhone className="nav-icon" /> BookList
                       </Link>
                     </li>
