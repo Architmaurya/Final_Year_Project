@@ -7,16 +7,6 @@ function Home(){
     return(
         <>
         <div className="hero-section">
-        <div className="col-lg-5 col-md-8 typewriter">
-        <Typewriter
-          options={{
-            strings: ['Find the most exciting  Books......'],
-            autoStart: true,
-            loop: true,
-          }}
-       />
-        </div>
-        
         </div>
         <Category/>
 

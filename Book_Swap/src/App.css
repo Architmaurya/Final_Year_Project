@@ -5,14 +5,14 @@ body{
       position: fixed;
     }
 .hero-section{
-    background-image: url(../public/b1.jpg);
+    background-image: url(../public/home.jpg);
     min-height:500px ;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    image-resolution: 300dpi snap;
+   
 }
 .typewriter{
-    color: rgb(21, 118, 192);
+    color:black;
     font-size: 80px;
     text-wrap: balance;
     margin-left: 15%; 
@@ -20,10 +20,7 @@ body{
     padding-bottom: 5%;
 }
 nav ul li:hover{
-border: 2px solid rebeccapurple;
-background-color: #9ff6f3fb;
-scale: 1.1;
-box-shadow: 0px 0px 2px 4px rgb(95, 40, 2) ;
+scale: 1.2;
 box-sizing: border-box;
 }
 .imglogo{
@@ -41,12 +38,12 @@ box-sizing: border-box;
 }
 
 .nav-link.active {
-  color: #007bff; /* Active link color */
+  color: black /* Active link color */
 }
 
 .nav-icon {
   font-size: 20px; /* Makes all icons the same size */
-  color: #2196f3 !important; /* Change this to any desired color */
+  color: black !important; /* Change this to any desired color */
 }
 
 
@@ -55,9 +52,8 @@ box-sizing: border-box;
   font-weight: 500;
 }
 
-
 .nav-text{
-    color: rgba(0, 47, 255, 0.557) !important;
+    color: red !important;
     font-size: larger;
     font-weight: bold;
 }
@@ -71,7 +67,7 @@ box-sizing: border-box;
   
   /*Footer css */
   .footer{
-    background-color: #063547;
+    background-color:rgba(0, 0, 0, 0.769);
     color:white;
     display: flex;
     justify-content: space-around;
@@ -89,7 +85,7 @@ box-sizing: border-box;
 }
 
 .btn-sub{
-    background-color: #43b89d!important;
+    background-color: green;
     border:0 !important;
     color:white !important;
 }
@@ -104,27 +100,44 @@ box-sizing: border-box;
 /*Category css*/
 
 .container_Cate {
-    margin-top: 20px;
-  }
-  
-  .category-card {
-    background-color: #f8f9fa; /* Light background for the card */
-  }
-  
-  .category-icon {
-    font-size: 2.5rem;
-    color: #007bff; /* Bootstrap primary blue */
-  }
-  
-  .category-card h3 {
-    margin-top: 10px;
-    font-size: 1.5rem;
-  }
-  
-  .category-card p {
-    font-size: 0.9rem;
-    color: #6c757d; /* Muted text */
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #f9f9f9;
+  border-radius: 15px;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+  font-size: 3rem;
+  color: red;
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.category-card p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.text-primary {
+  color: black !important;
+}
+
+.text-secondary {
+  color: #6c757d !important;
+}
 
   /*Contact css*/
 
@@ -136,7 +149,14 @@ box-sizing: border-box;
     border: 2px solid rebeccapurple;
     background-color:rgb(164, 183, 215)
   } */
-  h2 {
+
+
+  
+  /* Form Container Background */
+
+/*  */
+  
+   h2 {
     font-size: 2rem;
     font-weight: bold;
   }
@@ -162,8 +182,38 @@ box-sizing: border-box;
   
   textarea {
     resize: none;
-  }
+  } 
   
+
+  /* Background Styling for Form */
+.Contact_back {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and Textarea Hover Effect */
+.form-control:hover {
+  border-color: #ff6347;
+  box-shadow: 0 0 5px rgba(255, 99, 71, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background-color: #dc3545;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+.img-fluid {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
   /*Register css*/
   .form-style{
     border: 2px solid rgba(108, 24, 192, 0.66);
@@ -186,6 +236,90 @@ box-sizing: border-box;
     color: rgb(0, 187, 255) !important;
     font-size: 30px;
   }
+
+
+/* testimonial */
+/* Container and General Styling */
+.container {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Team Section Title */
+h2.text-primary {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Card Design */
+.team-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+  padding: 20px 15px;
+}
+
+/* Card Hover Effect */
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+}
+
+/* Image Styling */
+.card-img-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.team-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid black;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.1);
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Card Role */
+.card-role {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Testimonial */
+.card-testimonial {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .team-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 
   /*AdminDashboard*/
   .Admin-container{
@@ -258,10 +392,6 @@ box-sizing: border-box;
 }
 
 /* bookpost */
-
-
-
-
 
 /* all listing */
 

@@ -4,7 +4,8 @@ import { FaHome, FaRegistered, FaRegUser, FaSignOutAlt } from "react-icons/fa";
 import { BiCategory } from "react-icons/bi";
 import { CiLogin } from "react-icons/ci";
 import { MdOutlineContactPhone, MdAdminPanelSettings } from "react-icons/md";
-import { FcAbout, FcBusinessContact } from "react-icons/fc";
+import { FcBusinessContact } from "react-icons/fc";
+import { FaInfoCircle } from "react-icons/fa";
 import "../../App.css";
 
 function Nav() {
@@ -189,7 +190,7 @@ function Nav() {
                     </li>
                     <li className="nav-item">
                       <Link to="/about" className="nav-link nav-text">
-                        <FcAbout className="nav-icon" /> About us
+                        <FaInfoCircle className="nav-icon" /> About us
                       </Link>
                     </li>
                     <li className="nav-item">
