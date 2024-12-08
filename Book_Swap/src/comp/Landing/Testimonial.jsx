@@ -1,32 +1,60 @@
-import Testimonials from 'react-testimonials';
-function Testimonial() {
 
-    const img1 = 'archit.jpg'; // Put the Image URLs
-    const img2 = 'cat1'; // Put the Image URLs
-    const img3 = 'cat3'; // Put the Image URLs
-    const img4 = 'cat4'; // Put the Image URLs
+import React from 'react';
+import '../../App.css' 
 
-    
+function TeamShowcase() {
+  const teamMembers = [
+    {
+      img: 'archit.jpg', 
+      name: 'Archit Maurya',
+      role: 'Front-End Developer',
+      testimonial: 'I love building visually appealing and functional interfaces.',
+    },
+    {
+      img: 'nis.jpg', 
+      name: 'Niskarsh Mani Pandey',
+      role: 'Backend developer',
+      testimonial: "Building the foundation for powerful applications.",
+    },
+    {
+      img: 'shrisp2.jpg', 
+      name: 'Shristi Verma',
+      role: 'Backend Developer',
+      testimonial: 'Crafting seamless functionality is my passion—ensuring the unseen layers of the application work flawlessly.',
+    },
+    {
+      img: 'shivis.jpg', 
+      name: 'Shivanshi Sahu',
+      role: 'Frontend Developer',
+      testimonial: 'Transforming designs into interactive experiences.',
+    },
+  ];
 
-    const review1=[img1, "Archit Maurya", "B.tech(4th year)", "Role:FrontEnd"];
-    const review2=[img2, "Niskarsh Mani Pandey", "Creative Director", ""];
-    const review3=[img3, "Shristi Verma", "Creative Director", ""];
-    const review4=[img4, "Shivanshi Sahu", "Creative Director", ""];
-    
-
-  const items=[review1,review2,review3,review4]
-    return (<>
-        <div className="row testimonial_outer " >
-            <div className="col-sm-1"></div>
-            <div className="col-sm-10">
-                <div className="row main_testimonial">
-                <Testimonials items={items} />
-
-                </div>
+  return (
+    <div className="container my-5">
+      <h2 className="text-center mb-5 text-dark">Meet Our Team</h2>
+      <div className="row">
+        {teamMembers.map((member, index) => (
+          <div className="col-lg-3 col-md-6 mb-4" key={index}>
+            <div className="card team-card h-100">
+              <div className="card-img-wrapper">
+                <img
+                  src={member.img}
+                  className="team-img rounded-circle"
+                  alt={member.name}
+                />
+              </div>
+              <div className="card-body text-center">
+                <h5 className="card-title">{member.name}</h5>
+                <p className="card-role">{member.role}</p>
+                <p className="card-testimonial">"{member.testimonial}"</p>
+              </div>
             </div>
-            <div className="col-sm-1"></div>
-        </div>
-    </>)
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default Testimonial;
+export default TeamShowcase;

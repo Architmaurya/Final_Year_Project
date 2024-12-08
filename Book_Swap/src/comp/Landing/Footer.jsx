@@ -45,7 +45,7 @@ function Footer() {
       </div>
       <div className="row copyrights d-flex align-items-center bg-light">
         <div className="col-12  ">
-           &copy;2024 All Rights Reserved By Free Html Templates
+           &copy;2024 All Rights Reserved By Team BookSwap
         </div>
         </div>
     </>
