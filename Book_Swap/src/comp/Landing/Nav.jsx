@@ -5,6 +5,7 @@ import { BiCategory } from "react-icons/bi";
 import { CiLogin } from "react-icons/ci";
 import { MdOutlineContactPhone, MdAdminPanelSettings } from "react-icons/md";
 import { FcBusinessContact } from "react-icons/fc";
+import { MdPostAdd } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
 import "../../App.css";
 
@@ -126,7 +127,7 @@ function Nav() {
                     </li>
                     <li className="nav-item">
                       <Link to="/user/bookpost" className="nav-link nav-text">
-                        <FcAbout className="nav-icon" /> Posted
+                        <MdPostAdd className="nav-icon" /> Posted
                       </Link>
                     </li>
                     <li className="nav-item">
